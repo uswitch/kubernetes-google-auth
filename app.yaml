@@ -1,0 +1,14 @@
+runtime: go
+api_version: go1
+
+handlers:
+- url: /.*
+  script: _go_app
+
+skip_files:
+  - ^cmd/.*$
+
+env_variables:
+  OAUTH2_CLIENT_ID: CLIENT_ID
+  OAUTH2_CLIENT_SECRET: SECRET
+  VALID_DOMAIN: domain.com
